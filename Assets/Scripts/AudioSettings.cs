@@ -30,6 +30,11 @@ public class AudioSettings : MonoBehaviour
 
     private void Awake()
     {
+        if (menuPausaUI != null)
+        {
+            menuPausaUI.SetActive(false);
+        }
+
         if (Instance != null && Instance != this)
         {
             Destroy(gameObject);
