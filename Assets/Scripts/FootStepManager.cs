@@ -3,7 +3,7 @@ using UnityEngine.Audio;
 
 public class FootStepManager : MonoBehaviour
 {
-    public enum SurfaceType { GRASS, WOOD, ROAD, ROCK, WATER };
+    public enum SurfaceType { GRASS, WOOD, ROAD, ROCK, WATER, METAL };
     public static SurfaceType Surface = SurfaceType.GRASS;
 
     [System.Serializable]
