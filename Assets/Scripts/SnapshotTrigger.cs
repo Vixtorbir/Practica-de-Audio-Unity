@@ -6,12 +6,18 @@ public class SnapshotTrigger : MonoBehaviour
     public AudioSettings.AudioState zonaState = AudioSettings.AudioState.UNDERWATER;
     public float tiempoTransicion = 1.5f;
 
+    public AudioSource splashSound;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
             AudioSettings.Instance.SetCurrentSnapshot(zonaState, tiempoTransicion);
-            Debug.Log("Entrando en zona: " + zonaState);
+
+            if (splashSound != null)
+            {
+                splashSound.PlayOneShot(splashSound.clip);
+            }
         }
     }
 
@@ -20,7 +26,6 @@ public class SnapshotTrigger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             AudioSettings.Instance.SetCurrentSnapshot(AudioSettings.AudioState.GAMEPLAY, tiempoTransicion);
-            Debug.Log("Saliendo de zona. Volviendo a Gameplay");
         }
     }
 }
