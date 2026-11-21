@@ -1,7 +1,10 @@
 # WALKING SIMULATOR
 _**Names:**_ Marc Amo & Víctor Cárdenas
 
-_**Engine:**_ Unity 6
+_**Engine:**_ Unity 6 (6000.4.6f1)
+
+## HOW TO OPEN IT
+Open the repository folder with Unity 6000.4.6f1, open `Assets/Scenes/FinalScene.unity` and press Play.
 
 ## SCENE DESCRIPTION AND PROGRESSION (A -> B)
 The scene is a 3rd person walking simulator. 
